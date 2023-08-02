@@ -1,9 +1,17 @@
 class Config:
-    URL = 'https://telegra.ph/{title}-{month}-{day}'
+    BASE_URL = 'https://telegra.ph'
+    URL = BASE_URL + '/{title}-{date}'
+    SUFFIX = 2
+
+    DATE_STRUCTURE = '{month}-{day}'
+    IMAGE_PATTERN = r"/file/[^\s'\"<>]*"
+
     ENTER_TITLE = 'Enter title: '
 
     START_DATE = (2000, 1, 1)
     END_DATE = (2000, 12, 31)
+
+    DOWNLOADS = 'images/'
 
 
 class Colors:
